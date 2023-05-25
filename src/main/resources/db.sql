@@ -1,15 +1,15 @@
 CREATE TABLE "post" (
                         "id" SERIAL PRIMARY KEY,
-                        "name" TEXT NOT NULL DEFAULT '',
-                        "description" TEXT NOT NULL DEFAULT ''
+                        "name" TEXT NOT NULL ,
+                        "description" TEXT NOT NULL 
 );
 
 CREATE TABLE "user" (
                         "id" SERIAL PRIMARY KEY,
-                        "fio" TEXT NOT NULL DEFAULT '',
+                        "fio" TEXT NOT NULL,
                         "birthday" timestamptz NOT NULL,
-                        "email" TEXT DEFAULT '',
-                        "phone_number" TEXT NOT NULL DEFAULT '',
+                        "email" TEXTNOT NULL,
+                        "phone_number" TEXT NOT NULL,
                         "post_id" integer REFERENCES "post" ("id")
 );
 
